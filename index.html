@@ -283,46 +283,7 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- JavaScript simple para el menú móvil -->
-    <script>
-        // Menú móvil toggle (funcionalidad básica)
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            const navMenu = document.querySelector('.nav-menu');
-            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-            
-            if (navMenu.style.display === 'flex') {
-                navMenu.style.position = 'absolute';
-                navMenu.style.top = '100%';
-                navMenu.style.left = '0';
-                navMenu.style.right = '0';
-                navMenu.style.background = 'var(--verde-principal)';
-                navMenu.style.flexDirection = 'column';
-                navMenu.style.padding = '1rem';
-                navMenu.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
-            }
-        });
-
-        // Cerrar menú al hacer click en un enlace
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth < 768) {
-                    document.querySelector('.nav-menu').style.display = 'none';
-                }
-            });
-        });
-
-        // Ajustar menú en redimensión de ventana
-        window.addEventListener('resize', function() {
-            if (window.innerWidth >= 768) {
-                document.querySelector('.nav-menu').style.display = 'flex';
-                document.querySelector('.nav-menu').style.position = 'static';
-                document.querySelector('.nav-menu').style.flexDirection = 'row';
-                document.querySelector('.nav-menu').style.padding = '0';
-                document.querySelector('.nav-menu').style.boxShadow = 'none';
-            } else {
-                document.querySelector('.nav-menu').style.display = 'none';
-            }
-        });
-    </script>
+    <!-- Enlazar JavaScript externo -->
+    <script src="./assets/script.js"></script>
 </body>
 </html>

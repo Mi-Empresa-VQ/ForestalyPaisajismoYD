@@ -16,4 +16,6 @@ jobs:
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: .        # The folder the action should deploy.
-          token: ${{ secrets.GITHUB_TOKEN }}
+          # Use a Personal Access Token (GH_PAT) stored in repository secrets
+          # Create a PAT with 'repo' scope and add it to the repo secrets
+          token: ${{ secrets.GH_PAT }}
